@@ -24,6 +24,9 @@ function adicionar() {
 
     let mensagemTotal = document.getElementById('valor-total');
     mensagemTotal.innerHTML = `<span class="texto-azul" id="valor-total">R$${totalDaSoma}</span>`
+
+    document.getElementById('quantidade').value = '';
+
 }
 
 function pegarTotalExistente() {
