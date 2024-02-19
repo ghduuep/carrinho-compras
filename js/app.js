@@ -10,8 +10,11 @@ function adicionar() {
     let novoProduto = document.createElement('section');
     novoProduto.classList.add('carrinho__produtos__produto');
     novoProduto.innerHTML = `<span class="texto-azul">${quantidade}x</span> ${partesProduto[0]} <span class="texto-azul">${partesProduto[1]}</span>`;
-    carrinho.appendChild(novoProduto);
-
+    if (quantidade <= 0) {
+        alert('A quantidade é inválida, tente novamente!')
+    } else {
+        carrinho.appendChild(novoProduto);
+    }
 
     let totalExistente = parseInt(pegarTotalExistente());
 
